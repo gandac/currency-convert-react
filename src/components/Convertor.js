@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {Container, Grid} from 'semantic-ui-react';
 import SelectCurrency from './SelectCurrency';
 import InputConversionBox from './InputConversionBox';
+import ConvertionRate from './ConvertionRate'
 import * as actions from 'state/convertor/actions'
 import {
     CONVERTOR_SELECT_SOURCE ,
@@ -29,8 +30,18 @@ class Convertor extends React.Component {
 
         return (<Container className="Convertor">
             <Grid columns={2}>
+            <Grid.Row>
+                <Grid.Column>
+                    <h2>Currency converter</h2>
+                </Grid.Column>
+            </Grid.Row>
                 <Grid.Row>
                     <Grid.Column>
+                        <ConvertionRate 
+                        pairs = {this.props.pairs}
+                        sourceCur = { this.props.sourceCur }
+                        destCur = { this.props.destCur }
+                        />
                         <SelectCurrency 
                         pairsInfo = {this.props.pairsInfo}
                         value={this.props.sourceCur}
@@ -46,6 +57,11 @@ class Convertor extends React.Component {
                         />
                     </Grid.Column>
                     <Grid.Column>
+                        <ConvertionRate 
+                        pairs = {this.props.pairs}
+                        sourceCur = { this.props.destCur }
+                        destCur = { this.props.sourceCur }
+                        />
                         <SelectCurrency 
                         {...this.props}
                         pairsInfo = { this.props.pairsInfo }

@@ -1,11 +1,39 @@
 .Convertor {
+    font-weight: 200;
+    color:#fff;
+
     .selectCountry{
+        background-color:#2d485e;
+        padding: 0.6em;
+        position :relative;
+
         .selectedFlagImage{
             max-width: 1em;
             display: inline-block;
             margin-right: 0.4em;
             vertical-align: middle;
-            
+        }
+    }
+
+    .conversionBox{
+        background-color: #2a3a50;
+        padding: 0.5em;
+
+        .currencySymbol{
+            vertical-align: middle;
+            display: inline-block;
+            font-size:1.5em;
+            margin-right: 0.2em;
+        }
+        .inputConvert{
+            background: transparent;
+            color:#fff;
+            border: 0;
+            display: inline-block;
+            font-size:2em;
+            vertical-align: middle;
+            max-width: calc( 100% - 1.5em );
+            outline:none;
         }
     }
 }

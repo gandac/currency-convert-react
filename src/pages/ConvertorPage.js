@@ -42,7 +42,6 @@ class ConvertorPage extends React.Component{
                 <Grid>
                     <Grid.Row>
                         <Grid.Column >
-                            <h2>Currency converter</h2>
                             <Convertor pairsInfo={pairsInfo} pairs={this.props.pairs} />
                         </Grid.Column>
                     </Grid.Row>
