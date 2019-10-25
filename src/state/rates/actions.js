@@ -22,8 +22,8 @@ export const getRates = () => {
     }
 }
 
-
-
+// Function responsible to create rates with all currencies as sources against each  currencies as destionation
+// The result stores directly each combination in redux store.
 const createCurrencies = (data) => {
 
     try {
