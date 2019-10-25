@@ -8,7 +8,6 @@ export const getRates = () => {
         apiCall.get()
             .then( response => {
                 if( response.data.success === true){
-                    console.log('here');
                     dispatch(storeRates(response.data));
                     dispatch(createCurrencies(response.data));
                 }else{
