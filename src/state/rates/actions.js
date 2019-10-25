@@ -22,6 +22,8 @@ export const getRates = () => {
     }
 }
 
+
+
 const createCurrencies = (data) => {
 
     try {

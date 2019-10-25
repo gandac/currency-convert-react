@@ -26,9 +26,10 @@ const mapCurrencyPerCountry = (data) => {
              key: cur.currencies[0].code,
              value: cur.currencies[0].code,
              text: cur.currencies[0].name,
+             flag: cur.alpha2Code.toLowerCase(),
              image: {
-                avatar: true,
-                flat: cur.flag
+                avatar: false,
+                flag: cur.flag
              },
              countryName : cur.name,
              symbol : cur.currencies[0].symbol,
